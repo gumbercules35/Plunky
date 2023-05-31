@@ -15,12 +15,9 @@ public class Testing : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0)){
-            GameObject cloneSphere = Instantiate(sphere, new Vector3(50, 111, 86), Quaternion.identity);
-            cloneSphere.GetComponent<Rigidbody>().velocity +=  new Vector3(0, 0 , -1f);
-        }
-        if (Input.GetMouseButtonDown(1)){
-            GameObject cloneSphere = Instantiate(sphere, new Vector3(50, 111, 86), Quaternion.identity);
-            cloneSphere.GetComponent<Rigidbody>().velocity +=  new Vector3(0, 0 , 1f);
+            int spawnZ = Random.Range(-34, -54);
+            GameObject cloneSphere = Instantiate(sphere, new Vector3(-90, 57, spawnZ), Quaternion.identity);
+            // cloneSphere.GetComponent<Rigidbody>().velocity +=  new Vector3(0, 0 , -1f);
         }
     }
 }
